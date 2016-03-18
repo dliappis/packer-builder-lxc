@@ -9,14 +9,18 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
-	"syscall"
 	"strings"
+	"syscall"
 )
 
 type LxcAttachCommunicator struct {
 	RootFs        string
 	ContainerName string
 	CmdWrapper    CommandWrapper
+}
+
+func (c *LxcAttachCommunicator) DownloadDir(src string, dst string, exclude []string) error {
+	return fmt.Errorf("DownloadDir is not implemented for lxc")
 }
 
 func (c *LxcAttachCommunicator) Start(cmd *packer.RemoteCmd) error {
