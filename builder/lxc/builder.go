@@ -13,7 +13,7 @@ import (
 )
 
 // The unique ID for this builder
-const BuilderId = "ustream.lxc"
+const BuilderId = "dliappis.lxc"
 
 type wrappedCommandTemplate struct {
 	Command string
